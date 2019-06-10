@@ -1,10 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Container from '@material-ui/core/Container';
+import Search from './components/search/search';
 
 function App() {
   return (
     <div className="App">
+      <Container maxWidth="lg">
+        <Search />
+      </Container>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
