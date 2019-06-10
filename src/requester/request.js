@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 /* eslint-disable no-undef*/
-const { API_URL } = process.env
+const { REACT_APP_API_URL, REACT_APP_ACCESS_TOKEN } = process.env
 
 const instanceAxios = axios.create({
-  baseURL: 'https://superheroapi.com/api/2577395412285347',
+  baseURL: `${REACT_APP_API_URL}/${REACT_APP_ACCESS_TOKEN}`,
   timeout: 10000,
   headers: {
     "Access-Control-Allow-Origin": "*",
@@ -13,7 +13,6 @@ const instanceAxios = axios.create({
   },
   mode: 'no-cors',
   withCredentials: true,
-  credentials: 'same-origin',
 });
 
 export default instanceAxios;
